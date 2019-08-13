@@ -1,0 +1,99 @@
+Error:File has no write permission
+ do: chmod +w (file name) --> to enable the write permission
+	chmod -w (file name) --> to disable the write permission
+
+chmod +x on a file (your script) only means, that you'll make it executable.
+sudo chmod +x /usr/share/testfolder/aFile 
+
+------------------------------------
+echo-- is used as println to print anything on screen
+
+Variable-----------
+
+declare it directly as name=Het
+
+and to use it write: echo "name is $name"
+
+Array: os=('ubuntu' 'windows' 'kali')
+	os[3]="mac"--->addition another element
+	echo"${os[@]}"----> will print
+	echo"${os[1]}"-----> will print windows
+	unset os[2]---------->will remove the 3rd element
+	echo"${#os[@]}"--->will print the length of the array
+	
+
+
+to take a user input----------
+
+echo "Enter the user name:"
+read name_var
+echo"Entered name is $name_var"
+
+read -p 'User name:' user_var  //same line maj input lese
+echo "entered user name is $user_var"
+
+if you want to take input as an array 
+read -a user_vars
+echo "entered name are ${user_vars[0]} ${user_vars[1]}" 
+
+if statement(comparison na rule thodak alag che)--------------
+
+word=a
+if[[$word=="b"]]                          OR  if(($digit <=10)) jo double (()) vapro to normal vapariy em
+					      then........
+then
+	echo"condition b is true"
+elif[[$word=="a"]]
+then 
+	echo "condition a is true"
+else
+	echo "condition is false"
+fi
+
+in order to chech files and directories check file operator video-6
+------------------------------------
+for AND operator
+
+if["$age" -gt 18 -a "$age" -lt 30]     athwa   if((age >18 && age<30))
+		  | 
+	     AND operator
+
+for OR operator
+
+if["$age" -gt 18 -o "$age" -lt 30]
+		  | 
+	     OR operator
+----------------------------------
+WHILE loop
+
+while((n<=10))
+do
+	echo "$n"
+	n=$((n+1))   [or]    ((n++))
+done
+-----------------------------------
+FOR loop
+
+for((n=1;n<10;n++))
+do
+	echo "$n"
+done
+---------------------------------
+SELECT loop and UNTIL loop
+---------------------------------
+FUNCTION
+
+fun()
+{
+	echo "hello"
+}
+fn. ma argument pass karvano rule thodo alag che
+fn. call : syntax
+just write :fun -->hello will be print
+----------------------------------
+to sort the file of directory
+
+ls -x --sort=extension
+
+
+

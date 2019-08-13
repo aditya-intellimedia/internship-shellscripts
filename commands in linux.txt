@@ -1,0 +1,112 @@
+-h flag is used to get all information of a command
+EX: command -h
+and command --help will provide further information
+
+sudo mkdir (name) --to make directory
+--------------
+rmdir (name) | ---> to remove directory
+rm -r (name) |
+--------------
+--to create the text file--
+cat >(name).txt 
+touch (file name).extension
+
+--to read the text file--
+cat (file name).extension
+
+--To edit the file---
+sudo vim (filename) -->will create file and open it to edit
+sudo nano (file name).extension
+
+
+clear -----
+will clear the commandline
+
+*-----
+is used to select all element like all file
+grep -n "String" * --> will mention every line of all files in the same directory for the string.
+
+head-----
+head -n (file name)
+will print first n lines of the file
+
+tail------
+tail -n (file name)
+will print last n line of the file
+
+tail -f (file name)
+will start a loop and will print the most recent line that had been writen currently
+
+
+grep command--
+is used to print lines of particular string in a file,this command is case sensetive but 
+use grep -i (string) (file name) here i make it case insensitive
+use grep -in (string) (file name) here n will make it print the line no. too 
+use grep -v (string) (file name) here v flag, will print the every line which doesn't contain the string
+
+tail -f access.log | grep 24.10.160.10
+This is a useful example of using tail and grep to selectively monitor a log file in real time.
+
+In this command, tail monitors the file access.log. It pipes access.log's final ten lines, and any new lines added, to the grep utility. grep reads the output from tail, and outputs only those lines which contain the IP address 24.10.160.10.
+
+ifconfig--network information
+
+wconfig --wireless information
+
+sudo ufw enable--turn on firewall
+sudo ufw disable--turn off firewall
+
+apt-get upgrade
+	update
+	install pkg
+
+runlevel --to get current run level
+satrt service -- start job service
+stop service -- to stop job service
+
+netstat
+Displays generic statistics about the network activity of the local system.
+
+netstat -an
+Shows information about all active connections to the server, including the source and destination IP addresses and ports, if you have proper permissions.
+
+netstat -rn
+Displays the routing table for all IP addresses bound to the server.
+
+netstat -an |grep :80 | wc -l
+Collects statistics about the amount of active connections on port 80, and pipes this data to the wc command, which displays the number of connections by counting the lines of the original netstat output.
+
+netstat -natp
+Display statistics about active Internet connections
+
+firewall------
+ufw enable --> turn on the firewall
+    disable
+ufw allow port -->allow trafic on port
+    deny port --> block the port
+ufw deny from ip --> block the ip's
+
+cp --> to copy
+ex: cp myfile.txt myfilecopy.txt
+
+cd-->to change the directory
+Ex. cd workspace will enter in the worspace directory
+only cd will serve as a backspace.
+
+
+-----------
+file command 
+
+file filename  ---> will give all information abt the file
+---------------
+change the mode 
+
+sudo chmod 777 (file or directory name)  -R
+
+R stands foe recursive which if its folsder than it will change the mode for all trhe element of the folder
+======================
+change the ownership
+
+sudo chown -R myuser:mygroup otherfiles
+	        |
+	HET IF u want to change ownersjip to het	
