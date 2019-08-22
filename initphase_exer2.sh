@@ -8,9 +8,14 @@ then
   touch ind_file.$extension
   while IFS= read -r line
   do
-    if[]
+    if[[ "$line" == *{ ]]
+    
     then
+    while[ $linne != *} ]
+    do{
+    
       echo "/n $line">>ind_file.$extension
+      }
     else
        echo "/n $line">>ind_file.$extension
      fi
