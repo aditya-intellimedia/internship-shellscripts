@@ -1,0 +1,3 @@
+This bash script is used for code indentation. on execution user has to input the file name,
+the new file ind_file.extension will be created with code with indentation.
+This bash script accepts all files with different extension.
