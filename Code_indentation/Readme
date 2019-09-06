@@ -1,3 +1,10 @@
-This bash script is used for code indentation. on execution user has to input the file name,
+Phase 1:
+In the first phase (phase1.sh) bash script sorted the mix progrram in which multiple code line is mixed in a single line.
+this bash script will seprate such lines and then this file should be refrenced to phse 2.On execution of this file 
+intermediate_file.c will be generated. 
+
+
+Phase 2: 
+This bash(final.sh) script is used for code indentation. on execution user has to input the file name,
 the new file ind_file.extension will be created with code with indentation.
 This bash script accepts all files with different extension.
