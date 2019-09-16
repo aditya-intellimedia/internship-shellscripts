@@ -33,7 +33,7 @@ echo "Droplet is being created"
 doctl compute droplet create $droplet_name --region $reg --image $imag --size 1gb --ssh-keys 25336801 --wait
 
 echo "Droplet is created"
-doctl compute ssh het --ssh-command "sudo apt update"
-doctl compute ssh het --ssh-command "sudo apt install nginx"
-doctl compute ssh het --ssh-command "sudo apt install php-fpm"
+doctl compute ssh $droplet_name --ssh-command "sudo apt update"
+doctl compute ssh $droplet_name --ssh-command "sudo apt install nginx"
+doctl compute ssh $droplet_name --ssh-command "sudo apt install php-fpm"
 
