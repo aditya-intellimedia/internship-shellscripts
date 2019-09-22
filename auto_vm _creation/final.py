@@ -1,48 +1,33 @@
 #! /usr/bin/env python
 import digitalocean
-#import SSHClient
 import paramiko
-
-#import subprocess
-#import os
 manager = digitalocean.Manager(token="")
-#my_droplets = manager.get_all_droplets()
-#print(my_droplets)
 keys = manager.get_all_sshkeys()
-
-
-Droplet is been created
+print ("Droplet is been created")
 droplet = digitalocean.Droplet(token="",
-                               name='het',
-                               region='nyc1', # Amster
+                               name='Het',
+                               region='nyc1', # New York 2
                                image='ubuntu-14-04-x64', # Ubuntu 14.04 x64
                                size_slug='512mb',  # 512MB
-                               ssh_keys=keys, #Automatic conversion
                                backups=False)
 droplet.create()
-
 actions = droplet.get_actions()
 for action in actions:
     action.load()
     # Once it shows complete, droplet is up and running
     print(action.status)
+print("Enter your password : ")
+g=input()
 
-sh = paramiko.SSHClient()
-sh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-k = paramiko.RSAKey.from_private_key_file(authorized_keys)
-
-sh.connect(hostname=host, username=username, pkey=k)
-sh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command("sudo apt update")
-#subprocess.call(["doctl compute droplet create het --region nyc1 --image ubuntu-18-04-x64 --size 1gb --ssh-keys 25336801 --wait"," "])
-#cmd="doctl compute droplet create het --region nyc1 --image ubuntu-18-04-x64 --size 1gb --ssh-keys 25336801 --wait"
-#os.system("doctl compute droplet create het --region nyc1 --image ubuntu-18-04-x64 --size 1gb --ssh-keys 25336801 --wait")
+print("Enter your ip : ")
+i=input()
+ssh = paramiko.SSHClient()ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(i, username="root", password=g)
+ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command("sudo apt update")
+ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command("sudo install ngix")
 print("Droplet is created")
 #ccmd="doctl compute ssh het"
 #os.system(ccmd)
 print("DONE !!!")
 #os.system("sudo apt update")
 #sudo apt install nginx
-
-#sudo apt install php-fpm
-                            
