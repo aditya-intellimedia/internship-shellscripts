@@ -10,7 +10,7 @@ runcmd:
   - apt-get install -y php-fpm nginx
 """
 
-manager = digitalocean.Manager(token="b486718d9201e9c0d10d0a6285e01efd79a3316dc4a006344a002246fc3d139f")
+manager = digitalocean.Manager(token="")
 keys = manager.get_all_sshkeys()
 print("Enter Dropletr's name: ")
 dname=input()
@@ -53,7 +53,7 @@ else:
     print("INAVLID REGION!!!")
 
 print ("Droplet is been created")
-droplet = digitalocean.Droplet(token="b486718d9201e9c0d10d0a6285e01efd79a3316dc4a006344a002246fc3d139f",
+droplet = digitalocean.Droplet(token="",
                                name=dname,
                                region=sno1, # New York 2
                                image=sno, # Ubuntu 14.04 x64
