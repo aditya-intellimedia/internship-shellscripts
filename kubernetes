@@ -1,0 +1,38 @@
+Nodes :
+	 are physical computers or virtual machines that host application instances.
+
+
+1)Kubelet: 
+	If you think of a Node as a factory, Kubelet is the manager. Kubelet is an agent to maintain the node and communicate with the big boss Master node.
+
+Kubernetes Pod:
+	A Pod can host multiple containers and storage volumes
+
+Deployment
+	A deployment is a blueprint for the Pods to be create 
+Handles update of its respective Pods.
+A deployment will create a Pod by it’s spec from the template.
+Their target is to keep the Pods running and update them (with rolling-update) in a more controlled way.
+
+2)A container runtime: 
+	this is the factory workers. This component handles actually working with the application container running on the node. It unpacks the container, pulls container images from the registry, and runs the application.
+
+3)KubeProxy
+	kube-proxy is a network proxy that runs on each node in the cluster.
+
+
+kubectl:
+	The Kubernetes API is an HTTP REST API. This API is the real Kubernetes user interface. Kubernetes is fully controlled through this API.
+
+
+K'8 APi:
+
+The etcd
+	Store the information abou k8s cluster
+
+Kube Scheduler
+	Decide where to start the workload, on which node should it start the application
+
+ReplicaSet
+	A Repliaset runs n number of pods , based on the provided kubernetes object template.A ReplicaSet ensures that a specified number of pod replicas are running at any given time.
+If one pod dies or crashes , the ReplicaSet ensures a new one is created in its place .
