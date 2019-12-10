@@ -1,3 +1,11 @@
+to list th content :
+
+ls ---> list contnents
+ll --> list all contents with 
+ls -ld --> list contents with it permission
+
+
+
 -h flag is used to get all information of a command
 EX: command -h
 and command --help will provide further information
