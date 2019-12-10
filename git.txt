@@ -1,8 +1,8 @@
 https://github.com/aditya-intellimedia/internship-shellscripts.git
 
-git status -->
+git status --> show the current status of a repo.
 
-git init --->
+git init ---> initialise the git repo.
 
 git add filename ---> file will be added to stagging area
 
@@ -10,6 +10,11 @@ git commit -m "mesaage to print" ----> git ma commit karva mate
 
 git log --> repositry commit karela na log batavse 
 
+git push
+git pull
+git cherry pick
+git clone
+git reflog --> show the all commit history along with the message
 
 -----------------------------------------------------------------------
 git init creates a new Git repository
@@ -18,7 +23,7 @@ git add adds files from the working directory to the staging area
 git diff shows the difference between the working directory and the staging area
 git commit permanently stores file changes from the staging area in the repository
 git log shows a list of all previous commits
-git branch: Lists all a Git project’s branches.
+git branch: Lists all a Git projectâ€™s branches.
 git branch branch_name: Creates a new branch.
 git checkout branch_name: Used to switch from one branch to another.
 git merge branch_name: Used to join file changes from one branch to another.
