@@ -15,6 +15,8 @@ sudo mkdir (name) --to make directory
 rmdir (name) | ---> to remove directory
 rm -r (name) |
 --------------
+To read or write operation we use vim editor (:wq , wq! ,see difference in )
+
 --to create the text file--
 cat >(name).txt 
 touch (file name).extension
@@ -23,8 +25,8 @@ touch (file name).extension
 cat (file name).extension
 
 --To edit the file---
-sudo vim (filename) -->will create file and open it to edit
-sudo nano (file name).extension
+vim (filename) -->will create file and open it to edit
+nano (file name).extension
 
 
 clear -----
